@@ -1,4 +1,6 @@
 # Argos Translate GUI
+[Website](https://www.argosopentech.com) | [GitHub](https://github.com/argosopentech/argos-translate-gui) |[PyPI](https://pypi.org/project/argostranslategui/1.6.0/)
+
 Graphical user interface for [Argos Translate](https://github.com/argosopentech/argos-translate).
 
 ![Screenshot](/img/Screenshot.png)
