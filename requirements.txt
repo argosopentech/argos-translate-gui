@@ -1,0 +1,2 @@
+argostranslate
+PyQt5==5.15.4
