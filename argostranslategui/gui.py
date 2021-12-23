@@ -56,7 +56,7 @@ class WorkerStatusButton(QPushButton):
     def clicked_handler(self):
         info("WorkerStatusButton clicked_handler")
         if self.status == self.Status.NOT_STARTED:
-            self.worker_thread = utils.WorkerThread(self.bound_worker_function)
+            self.worker_thread = WorkerThread(self.bound_worker_function)
             self.worker_thread.finished.connect(self.finished_handler)
             self.set_status(self.Status.RUNNING)
             self.worker_thread.start()
