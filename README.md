@@ -24,10 +24,10 @@ sudo snap install snapcraft
 3. Clone this repo:
 ```
 git clone https://github.com/argosopentech/argos-translate-gui.git
-cd argos-translate
 ```
 4. From the root directory of this project build the snap package:
 ```
+cd argos-translate-gui
 SNAPCRAFT_BUILD_ENVIRONMENT_MEMORY=4G snapcraft
 ```
 Any *unzipped* package files in package/ will be automatically included in the snap archive (and won't be able to be deleted by users of the snap).
