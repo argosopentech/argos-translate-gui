@@ -19,7 +19,7 @@ pip3 install argostranslategui
 2. Using snapd install snapcraft and its dependency multipass:
 ```
 sudo snap install multipass
-sudo snap install snapcraft
+sudo snap install --classic snapcraft
 ```
 3. Clone this repo:
 ```
