@@ -14,6 +14,8 @@ pip3 install argostranslategui
 
 ```
 
+## Snapcraft
+
 ### Build and install snap package
 1. Install [snapd](https://snapcraft.io/docs/installing-snapd) if it isn't already installed.
 2. Using snapd install snapcraft and its dependency multipass:
@@ -39,3 +41,28 @@ Note, the build won't run with Snapcraft's default build memory of 2GB so you ne
 sudo snap install --devmode argos-translate_<version information>.snap
 ```
 
+### Install from Snap Store
+* Snap store install [currently unavailable](https://forum.snapcraft.io/t/omp-permission-error/28425) but snap build and install can still be done manually.
+
+Argos Translate is available from the Snap Store and auto installs a content snap to support translation between Arabic, Chinese, English, French, Russian, and Spanish. Additional languages can be installed from supplementary content snaps.
+
+With [snapd installed](https://snapcraft.io/docs/installing-snapd):
+```
+sudo snap install argos-translate
+```
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/argos-translate)
+
+Automatically installs and connects to `argos-translate-base-langs` snap to support translations between Arabic, Chinese, English, French, Russian, and Spanish.
+
+Additional languages can be installed from *.argosmodel files or from supplementary content snaps:
+* argos-translate-de-en - German - English
+* argos-translate-en-it - English - Italian
+* argos-translate-en-pt - English - Portuguese
+
+To connect automatically:
+`sudo snap connect argos-translate:argos-packages argos-translate-en-it:argos-packages`
+
+To run command line interface on Snapcraft:
+```
+argos-translate.cli --help
+```
