@@ -66,3 +66,18 @@ To run command line interface on Snapcraft:
 ```
 argos-translate.cli --help
 ```
+
+### Uninstall Snap
+
+The following command will uninstall the snap package.
+
+``` shell
+sudo snap remove argos-translate argos-translate-base-langs
+```
+
+If you installed additional language packs, you might want to remove them as well, e.g.
+
+``` shell
+sudo snap remove argos-translate-de-en
+
+```
