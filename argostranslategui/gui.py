@@ -1,14 +1,14 @@
-from pathlib import Path
 import os
-from functools import partial
 from enum import Enum
+from functools import partial
+from pathlib import Path
 
-from PyQt5.QtWidgets import *
-from PyQt5.QtGui import *
+from argostranslate import package, settings, translate, utils
+from argostranslate.utils import error, info
 from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 
-from argostranslate import translate, package, settings, utils
-from argostranslate.utils import info, error
 
 class WorkerThread(QThread):
     """Runs a bound function on a thread"""
@@ -112,6 +112,7 @@ class PackagesTable(QTableWidget):
 
     def get_packages(self):
         if self.table_content == self.TableContent.AVAILABLE:
+            package.update_package_index()
             packages = package.get_available_packages()
         elif self.table_content == self.TableContent.INSTALLED:
             packages = package.get_installed_packages()
