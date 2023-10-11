@@ -13,7 +13,7 @@ OPTIONS = {"packages": ["sentencepiece"], "iconfile": "argostranslate/img/icon.i
 
 setup(
     name="argostranslategui",
-    version="1.6.1",
+    version="1.6.5",
     description="Graphical user interface for Argos Translate",
     long_description=long_description,
     long_description_content_type="text/markdown",
