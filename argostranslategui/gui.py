@@ -10,6 +10,13 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
 
+class PlainPasteTextEdit(QTextEdit):
+    """Forces pasted text to have formatting cleared"""
+    def insertFromMimeData(self, source):
+        # Get plain text and insert it
+        self.insertPlainText(source.text())
+        
+
 class WorkerThread(QThread):
     """Runs a bound function on a thread"""
 
@@ -342,10 +349,10 @@ class GUIWindow(QMainWindow):
         self.language_selection_layout.addStretch()
 
         # TextEdits
-        self.left_textEdit = QTextEdit()
+        self.left_textEdit = PlainPasteTextEdit()
         self.left_textEdit.setPlainText("Text to translate from")
         self.left_textEdit.textChanged.connect(self.translate)
-        self.right_textEdit = QTextEdit()
+        self.right_textEdit = PlainPasteTextEdit()
         self.right_textEdit.setPlainText("Text to translate to")
         self.textEdit_layout = QHBoxLayout()
         self.textEdit_layout.addWidget(self.left_textEdit)
